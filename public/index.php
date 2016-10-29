@@ -6,29 +6,26 @@ use \Psr\Http\Message\ServerRequestInterface as Request;
 use \Psr\Http\Message\ResponseInterface as Response;
 require '../vendor/autoload.php';
 
+$possible_languages = ['pt', 'en'];
+$language = ["lang" => $possible_languages[0]];
+
 $app = new App();
-
-$possible_langs = ['', 'pt', 'en'];
-$default_lang = ["lang" => $possible_langs[1]];
-
 $container = $app->getContainer();
-$container['view'] = new PhpRenderer("../templates/", $default_lang);
+$container['renderer'] = new PhpRenderer("../views/", $language);
+$container['possible_languages'] = $possible_languages;
 
-$container['lang_regex']  = '#';
-foreach ($possible_langs as $possible_lang) {
-	$container['lang_regex'] .= '|^'.$possible_lang.'$';
-}
-$container['lang_regex'] .= '#';
-
-$app->get('[/{lang:.*}]', function (Request $request, Response $response) use ($app) {
+$app->get('/', function (Request $request, Response $response) {
+	return $this->renderer->render($response, "base.php");
+});
+$app->get('[/{lang}]', function (Request $request, Response $response){
 	$lang = $request->getAttribute('lang');
 
-	if (preg_match($this->lang_regex, $lang)) {
-		$response = $this->view->render($response, "base.php", [
+	if (in_array($lang, $this->possible_languages, true)) {
+		$response = $this->renderer->render($response, "base.php", [
 			"lang" => $lang
 		]);
 	} else {
-		$response = $this->view->render($response, "404.php");
+		$response = $this->renderer->render($response, "404.php");
 	}
 	return $response;
 });
