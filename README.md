@@ -7,6 +7,24 @@ Extension to the [Slim](http://www.slimframework.com/) framework v3 to enable la
 * [Slim/Slim](https://github.com/slimphp/Slim) (v3)
 * [Slim/PHP-View](https://github.com/slimphp/PHP-View)
 
+## Installation
+
+By terminal:
+
+```shell
+    composer require luism-s/multilingualslim "dev-master"
+```
+
+By editing composer.json
+
+```json
+    {
+        "require": {
+            "luism-s/multilingualslim": "dev-master"
+        }
+    }
+```
+
 ## Usage
 
 The `$container` is used as a mean to serve as an interface between the Middleware and the Routes. 
