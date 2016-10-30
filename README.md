@@ -14,40 +14,39 @@ The multilinguage middleware injects the following variables into the `$containe
 The first two are variables set by the developer, and the last is set by the middleware itself and indicates the requested language. 
 
 ```php
-use \Psr\Http\Message\ServerRequestInterface as Request;
-use \Psr\Http\Message\ResponseInterface as Response;
+    use \Psr\Http\Message\ServerRequestInterface as Request;
+    use \Psr\Http\Message\ResponseInterface as Response;
 
-require '../vendor/autoload.php';
+    require '../vendor/autoload.php';
 
-$available_languages = ['pt', 'en'];
-$default_language = $available_languages[0];
+    $available_languages = ['pt', 'en'];
+    $default_language = $available_languages[0];
 
-$app = new \Slim\App();
-$container = $app->getContainer();
-$container['renderer'] = new \Slim\Views\PhpRenderer("../views/", array("language" => $default_language));
+    $app = new \Slim\App();
+    $container = $app->getContainer();
+    $container['renderer'] = new \Slim\Views\PhpRenderer("../views/", array("language" => $default_language));
 
-$app->add( new \MultilingualSlim\LanguageMiddleware($available_languages, $default_language, $container) );
+    $app->add( new \MultilingualSlim\LanguageMiddleware($available_languages, $default_language, $container) );
 
-$app->get('/', function (Request $request, Response $response) {
-    //This works with '/', '/pt' and '/en', and 
-    //and returns the template views/base.php
-    return $this->renderer->render($response, "base.php", [
-        "language" => $this->language
-    ]);
-});
+    $app->get('/', function (Request $request, Response $response) {
+        //This works with '/', '/pt' and '/en', and 
+        //and returns the template views/base.php
+        return $this->renderer->render($response, "base.php", [
+            "language" => $this->language
+        ]);
+    });
 
-$app->get('/hello', function (Request $request, Response $response) {
-    //This works with '/hello', '/pt/hello' and '/en/hello',
-    //and prints 'Hello' in each languages
-    if ($this->language === $this->default_language  || $this->language === 'pt') {
-        return $response->write("Olá");
-    } else {
-        return $response->write("Hello");
-    }
-});
+    $app->get('/hello', function (Request $request, Response $response) {
+        //This works with '/hello', '/pt/hello' and '/en/hello',
+        //and prints 'Hello' in each languages
+        if ($this->language === $this->default_language  || $this->language === 'pt') {
+            return $response->write("Olá");
+        } else {
+            return $response->write("Hello");
+        }
+    });
 
-$app->run();
-
+    $app->run();
 ```
 
 
