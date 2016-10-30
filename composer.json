@@ -2,5 +2,10 @@
     "require": {
         "slim/slim": "~3.5",
         "slim/php-view": "^2.2"
+    },
+	"autoload": {
+		"psr-4": {
+            "MultilingualSlim\\": "MultilingualMiddleware/"
+        }
     }
 }
