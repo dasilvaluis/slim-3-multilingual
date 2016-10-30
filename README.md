@@ -52,7 +52,7 @@ $app->run();
 
 ## Acknowledgements 
 
-This project is largery inspired by [SimoTod/slim-multilanguage](https://github.com/SimoTod/slim-multilanguage), which is made for the version 2 of Slim.
+This project is largely inspired by [SimoTod/slim-multilanguage](https://github.com/SimoTod/slim-multilanguage), which is made for the version 2 of Slim.
 
 ## TODO
 
