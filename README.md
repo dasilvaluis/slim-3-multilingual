@@ -42,8 +42,8 @@ The first two are variables set by the developer, and the last is set by the mid
 
     require '../vendor/autoload.php';
 
+    $default_language = 'pt';
     $available_languages = ['pt', 'en'];
-    $default_language = $available_languages[0];
 
     $app = new \Slim\App();
     $container = $app->getContainer();
@@ -52,8 +52,9 @@ The first two are variables set by the developer, and the last is set by the mid
     $app->add( new \MultilingualSlim\LanguageMiddleware($available_languages, $default_language, $container) );
 
     $app->get('/', function (Request $request, Response $response) {
-        //This works with '/', '/pt' and '/en', and 
-        //and returns the template views/base.php
+        //This works with '/', '/pt' and '/en', 
+        //and returns the template views/base.php.
+        //It also passes the chosen language as an argument accessible from the chosen template.
         return $this->renderer->render($response, "base.php", [
             "language" => $this->language
         ]);
@@ -61,11 +62,11 @@ The first two are variables set by the developer, and the last is set by the mid
 
     $app->get('/hello', function (Request $request, Response $response) {
         //This works with '/hello', '/pt/hello' and '/en/hello',
-        //and prints 'Hello' in each languages
-        if ($this->language === $this->default_language  || $this->language === 'pt') {
-            return $response->write("Olá");
+        //and prints 'Hello' in each languages.
+        if ($this->language === $this->default_language) {
+            return $response->write("Olá Mundo");
         } else {
-            return $response->write("Hello");
+            return $response->write("Hello World");
         }
     });
 
@@ -76,7 +77,7 @@ The first two are variables set by the developer, and the last is set by the mid
 
 ## Acknowledgements 
 
-This project is largely inspired by [SimoTod/slim-multilanguage](https://github.com/SimoTod/slim-multilanguage), which is made for the version 2 of Slim.
+This project is largely influenced by [SimoTod/slim-multilanguage](https://github.com/SimoTod/slim-multilanguage), which follows the same philosophy but is made for the version 2 of Slim.
 
 ## TODO
 
