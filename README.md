@@ -14,6 +14,8 @@ The multilinguage middleware injects the following variables into the `$containe
 The first two are variables set by the developer, and the last is set by the middleware itself and indicates the requested language. 
 
 ```php
+
+
     use \Psr\Http\Message\ServerRequestInterface as Request;
     use \Psr\Http\Message\ResponseInterface as Response;
 
@@ -47,6 +49,8 @@ The first two are variables set by the developer, and the last is set by the mid
     });
 
     $app->run();
+
+    
 ```
 
 
