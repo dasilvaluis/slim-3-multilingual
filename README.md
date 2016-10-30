@@ -1,6 +1,6 @@
 # Multilingual Slim
 
-Extension to the [Slim](http://www.slimframework.com/) framework v3 to enable language routing.
+Extension to the [Slim](http://www.slimframework.com/) framework v3 to enable language based routing, i.e. i18n and l10n.
 
 ## Dependencies
 
@@ -37,7 +37,6 @@ The first two are variables set by the developer, and the last is set by the mid
 
 ```php
 
-
     use \Psr\Http\Message\ServerRequestInterface as Request;
     use \Psr\Http\Message\ResponseInterface as Response;
 
@@ -71,7 +70,6 @@ The first two are variables set by the developer, and the last is set by the mid
     });
 
     $app->run();
-
     
 ```
 
