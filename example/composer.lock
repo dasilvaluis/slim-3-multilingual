@@ -39,12 +39,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/luism-s/MultilingualSlim.git",
-                "reference": "3caec5f25e90315453b1b6ccdabcc93415f62e6c"
+                "reference": "09108b25f918369a4ede0e06f47b21d6eb6bbaf0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/luism-s/MultilingualSlim/zipball/3caec5f25e90315453b1b6ccdabcc93415f62e6c",
-                "reference": "3caec5f25e90315453b1b6ccdabcc93415f62e6c",
+                "url": "https://api.github.com/repos/luism-s/MultilingualSlim/zipball/09108b25f918369a4ede0e06f47b21d6eb6bbaf0",
+                "reference": "09108b25f918369a4ede0e06f47b21d6eb6bbaf0",
                 "shasum": ""
             },
             "require": {
@@ -54,7 +54,7 @@
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "MultilingualSlim\\": "MultilingualMiddleware/"
+                    "MultilingualSlim\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -70,7 +70,7 @@
                 "multilingual",
                 "slim"
             ],
-            "time": "2016-10-30 13:38:35"
+            "time": "2016-10-30 14:52:30"
         },
         {
             "name": "nikic/fast-route",
