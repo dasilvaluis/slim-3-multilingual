@@ -12,17 +12,21 @@ Extension to the [Slim](http://www.slimframework.com/) framework v3 to enable la
 By terminal:
 
 ```shell
+
     composer require luism-s/multilingualslim "dev-master"
+
 ```
 
 By editing composer.json
 
 ```json
+
     {
         "require": {
             "luism-s/multilingualslim": "dev-master"
         }
     }
+    
 ```
 
 ## Usage
