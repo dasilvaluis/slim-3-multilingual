@@ -39,16 +39,15 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/luism-s/MultilingualSlim.git",
-                "reference": "09108b25f918369a4ede0e06f47b21d6eb6bbaf0"
+                "reference": "0cf4b52d1460bcef3e909f44d004a3085cd3c1fe"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/luism-s/MultilingualSlim/zipball/09108b25f918369a4ede0e06f47b21d6eb6bbaf0",
-                "reference": "09108b25f918369a4ede0e06f47b21d6eb6bbaf0",
+                "url": "https://api.github.com/repos/luism-s/MultilingualSlim/zipball/0cf4b52d1460bcef3e909f44d004a3085cd3c1fe",
+                "reference": "0cf4b52d1460bcef3e909f44d004a3085cd3c1fe",
                 "shasum": ""
             },
             "require": {
-                "slim/php-view": "^2.2",
                 "slim/slim": "~3.5"
             },
             "type": "library",
@@ -70,7 +69,7 @@
                 "multilingual",
                 "slim"
             ],
-            "time": "2016-10-30 14:52:30"
+            "time": "2016-10-31 12:15:47"
         },
         {
             "name": "nikic/fast-route",
