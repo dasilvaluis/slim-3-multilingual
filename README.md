@@ -5,7 +5,6 @@ Extension to the [Slim](http://www.slimframework.com/) framework v3 to enable la
 ## Dependencies
 
 * [Slim/Slim](https://github.com/slimphp/Slim) (v3)
-* [Slim/PHP-View](https://github.com/slimphp/PHP-View)
 
 ## Installation
 
@@ -47,21 +46,11 @@ The first two are variables set by the developer, and the last is set by the mid
 
     $app = new \Slim\App();
     $container = $app->getContainer();
-    $container['renderer'] = new \Slim\Views\PhpRenderer("../views/", array("language" => $default_language));
 
     $app->add( new \MultilingualSlim\LanguageMiddleware($available_languages, $default_language, $container) );
 
     $app->get('/', function (Request $request, Response $response) {
-        //This works with '/', '/pt' and '/en', 
-        //and returns the template views/base.php.
-        //It also passes the chosen language as an argument accessible from the chosen template.
-        return $this->renderer->render($response, "base.php", [
-            "language" => $this->language
-        ]);
-    });
-
-    $app->get('/hello', function (Request $request, Response $response) {
-        //This works with '/hello', '/pt/hello' and '/en/hello',
+        //This works with '/', '/pt' and '/en',
         //and prints 'Hello' in each languages.
         if ($this->language === $this->default_language) {
             return $response->write("Olá Mundo");
@@ -74,6 +63,22 @@ The first two are variables set by the developer, and the last is set by the mid
     
 ```
 
+You can also use a library to render templates such as php-view. For example:
+
+```php
+
+    $container['renderer'] = new \Slim\Views\PhpRenderer("../views/", array("language" => $default_language));
+
+    $app->get('/home', function (Request $request, Response $response) {
+            //This works with '/home', '/pt/home' and '/en/home', 
+            //and returns the template views/base.php.
+            //It also passes the chosen language as an argument accessible from the chosen template.
+            return $this->renderer->render($response, "base.php", [
+                "language" => $this->language
+            ]);
+    });
+
+```
 
 ## Acknowledgements 
 

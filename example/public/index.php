@@ -16,15 +16,18 @@ $container['renderer'] = new PhpRenderer("../views/");
 
 $app->add( new \MultilingualSlim\LanguageMiddleware($available_languages, $default_language, $container) );
 
-$app->get('/', function (Request $request, Response $response) {
-
+$app->get('/template', function (Request $request, Response $response) {
+        //This works with '/', '/pt' and '/en', 
+        //and returns the template views/base.php.
+        //It also passes the chosen language as an argument accessible from the chosen template.
         return $this->renderer->render($response, "base.php", [
             "language" => $this->language
         ]);
 });
 
-$app->get('/hello', function (Request $request, Response $response) {
-
+$app->get('/', function (Request $request, Response $response) {
+        //This works with '/', '/pt' and '/en',
+        //and prints 'Hello' in each languages.
         if ($this->language === $this->default_language || $this->language === 'pt') {
             return $response->write("Olá");
         } else {
