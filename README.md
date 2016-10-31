@@ -51,7 +51,7 @@ The first two are variables set by the developer, and the last is set by the mid
 
     $app->get('/', function (Request $request, Response $response) {
         //This works with '/', '/pt' and '/en',
-        //and prints 'Hello' in each languages.
+        //and prints 'Hello' in each language.
         if ($this->language === $this->default_language) {
             return $response->write("Olá Mundo");
         } else {

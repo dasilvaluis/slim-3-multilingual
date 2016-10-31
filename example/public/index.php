@@ -18,7 +18,7 @@ $app->add( new \MultilingualSlim\LanguageMiddleware($available_languages, $defau
 
 $app->get('/', function (Request $request, Response $response) {
         //This works with '/', '/pt' and '/en',
-        //and prints 'Hello' in each languages.
+        //and prints 'Hello' in each language.
         if ($this->language === $this->default_language || $this->language === 'pt') {
             return $response->write("Olá");
         } else {
