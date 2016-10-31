@@ -67,7 +67,7 @@ You can also use a library to render templates such as php-view. For example:
 
 ```php
 
-    $container['renderer'] = new \Slim\Views\PhpRenderer("../views/", array("language" => $default_language));
+    $container['renderer'] = new \Slim\Views\PhpRenderer("../views/");
 
     $app->get('/home', function (Request $request, Response $response) {
             //This works with '/home', '/pt/home' and '/en/home', 

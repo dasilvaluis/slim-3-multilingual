@@ -7,8 +7,8 @@ use \Psr\Http\Message\ResponseInterface as Response;
 
 require '../vendor/autoload.php';
 
+$default_language = 'pt';
 $available_languages = ['pt', 'en'];
-$default_language = $available_languages[0];
 
 $app = new App();
 $container = $app->getContainer();
