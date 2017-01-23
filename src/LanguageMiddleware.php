@@ -37,7 +37,7 @@ class LanguageMiddleware {
         if(count($pathChunks) > 1 && in_array($pathChunks[0], $this->container['available_languages'])) {
 
             //Set current language
-            $this->container['language'] = $pathChunks[1];  
+            $this->container['language'] = $pathChunks[0];  
             
             //Produce new URI without language reference 
             unset($pathChunks[0]);
