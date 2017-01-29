@@ -2,8 +2,6 @@
 
 namespace MultilingualSlim;
 
-use MultilingualSlim\Language;
-
 class LanguageMiddleware {
 
     protected $container;
