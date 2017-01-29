@@ -1,6 +1,6 @@
 {
     "require": {
         "luism-s/multilingualslim": "dev-master",
-        "slim/php-view": "^2.2"
+        "slim/php-view": "~2.2"
     }
 }

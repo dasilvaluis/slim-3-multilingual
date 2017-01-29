@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "841f226c9bc4a3d6ca05b3e8790e2ed2",
+    "content-hash": "c1e597ce4536a1c05666551c19ce0e17",
     "packages": [
         {
             "name": "container-interop/container-interop",
@@ -39,12 +39,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/luism-s/MultilingualSlim.git",
-                "reference": "0cf4b52d1460bcef3e909f44d004a3085cd3c1fe"
+                "reference": "801267a056474f8b8349c11cd42542c0bd8690aa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/luism-s/MultilingualSlim/zipball/0cf4b52d1460bcef3e909f44d004a3085cd3c1fe",
-                "reference": "0cf4b52d1460bcef3e909f44d004a3085cd3c1fe",
+                "url": "https://api.github.com/repos/luism-s/MultilingualSlim/zipball/801267a056474f8b8349c11cd42542c0bd8690aa",
+                "reference": "801267a056474f8b8349c11cd42542c0bd8690aa",
                 "shasum": ""
             },
             "require": {
@@ -69,20 +69,20 @@
                 "multilingual",
                 "slim"
             ],
-            "time": "2016-10-31 12:15:47"
+            "time": "2017-01-29 00:12:13"
         },
         {
             "name": "nikic/fast-route",
-            "version": "v1.0.1",
+            "version": "v1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nikic/FastRoute.git",
-                "reference": "8ea928195fa9b907f0d6e48312d323c1a13cc2af"
+                "reference": "f3dcf5130e634b6123d40727d612ec6aa4f61fb3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nikic/FastRoute/zipball/8ea928195fa9b907f0d6e48312d323c1a13cc2af",
-                "reference": "8ea928195fa9b907f0d6e48312d323c1a13cc2af",
+                "url": "https://api.github.com/repos/nikic/FastRoute/zipball/f3dcf5130e634b6123d40727d612ec6aa4f61fb3",
+                "reference": "f3dcf5130e634b6123d40727d612ec6aa4f61fb3",
                 "shasum": ""
             },
             "require": {
@@ -112,7 +112,7 @@
                 "router",
                 "routing"
             ],
-            "time": "2016-06-12T19:08:51+00:00"
+            "time": "2016-10-20T17:36:47+00:00"
         },
         {
             "name": "pimple/pimple",
@@ -261,16 +261,16 @@
         },
         {
             "name": "slim/slim",
-            "version": "3.5.0",
+            "version": "3.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/slimphp/Slim.git",
-                "reference": "184352bc1913d7ba552ab4131d62f4730ddb0893"
+                "reference": "4254e40d81559e35cdf856bcbaca5f3af468b7ef"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/slimphp/Slim/zipball/184352bc1913d7ba552ab4131d62f4730ddb0893",
-                "reference": "184352bc1913d7ba552ab4131d62f4730ddb0893",
+                "url": "https://api.github.com/repos/slimphp/Slim/zipball/4254e40d81559e35cdf856bcbaca5f3af468b7ef",
+                "reference": "4254e40d81559e35cdf856bcbaca5f3af468b7ef",
                 "shasum": ""
             },
             "require": {
@@ -320,14 +320,14 @@
                 }
             ],
             "description": "Slim is a PHP micro framework that helps you quickly write simple yet powerful web applications and APIs",
-            "homepage": "http://slimframework.com",
+            "homepage": "https://slimframework.com",
             "keywords": [
                 "api",
                 "framework",
                 "micro",
                 "router"
             ],
-            "time": "2016-07-26T15:12:13+00:00"
+            "time": "2016-12-20T20:30:47+00:00"
         }
     ],
     "packages-dev": [],
