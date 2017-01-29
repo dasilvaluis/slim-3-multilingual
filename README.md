@@ -30,7 +30,7 @@ By editing composer.json
 
 ## Usage
 
-The `$container` is used as a mean to serve as an interface between the Middleware and the Routes. 
+The `$container` is used as an interface between the Middleware and the Routes. 
 The multilinguage middleware injects the following variables into the `$container`: `default_language`, `available_languages` and `language`. 
 The first two are variables set by the developer, and the last is set by the middleware itself and indicates the requested language. 
 
@@ -52,9 +52,9 @@ The first two are variables set by the developer, and the last is set by the mid
     $app->get('/', function (Request $request, Response $response) {
         //This works with '/', '/pt' and '/en',
         //and prints 'Hello' in each language.
-        if ($this->language === $this->default_language) {
+        if ($this->language === 'pt') {
             return $response->write("Olá Mundo");
-        } else {
+        } elseif($this->language === 'en') {
             return $response->write("Hello World");
         }
     });
