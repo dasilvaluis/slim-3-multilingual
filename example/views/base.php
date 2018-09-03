@@ -1,1 +1,0 @@
-<h1> Language: <?php echo $language; ?> </h1> 

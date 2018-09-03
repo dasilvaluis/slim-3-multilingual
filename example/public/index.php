@@ -8,31 +8,40 @@ use \Psr\Http\Message\ResponseInterface as Response;
 require '../vendor/autoload.php';
 
 $default_language = 'pt';
-$available_languages = ['pt', 'en'];
+$available_languages = ['pt', 'es', 'en', 'fr', 'de'];
 
 $app = new App();
 $container = $app->getContainer();
-$container['renderer'] = new PhpRenderer("../views/");
 
 $app->add( new \MultilingualSlim\LanguageMiddleware($available_languages, $default_language, $container) );
 
 $app->get('/', function (Request $request, Response $response) {
+
+        $output =   '<nav>
+                        <ul>
+                            <li><a href="/">PT</a></li>
+                            <li><a href="/es">ES</a></li>
+                            <li><a href="/en">EN</a></li>
+                            <li><a href="/fr">FR</a></li>
+                            <li><a href="/de">DE</a></li>
+                        </ul>
+                    </nav>';
+
         //This works with '/', '/pt' and '/en',
         //and prints 'Hello' in each language.
-        if ($this->language === 'pt') {
-            return $response->write("Olá Mundo");
-        } elseif($this->language === 'en') {
-            return $response->write("Hello World");
+        if ( $this->language === 'pt' ) {
+            $output .= "<p>Olá Mundo!</p>";
+        } elseif ( $this->language === 'en' ) {
+            $output .= "<p>Hello World!</p>";
+        } elseif ( $this->language === 'es' ) {
+            $output .= "<p>Hola Mundo!</p>";
+        } elseif ( $this->language === 'fr' ) {
+            $output .= "<p>Bonjour le Monde!</p>";
+        } elseif ( $this->language === 'de' ) {
+            $output .= "<p>Hallo Welt!</p>";
         }
-});
 
-$app->get('/home', function (Request $request, Response $response) {
-        //This works with '/home', '/pt/home' and '/en/home', 
-        //and returns the template views/base.php.
-        //It also passes the chosen language as an argument accessible from the chosen template.
-        return $this->renderer->render($response, "base.php", [
-            "language" => $this->language
-        ]);
+        return $response->write($output);
 });
 
 $app->run();
