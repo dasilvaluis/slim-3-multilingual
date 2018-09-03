@@ -1,4 +1,4 @@
-# Multilingual Slim
+# Slim 3 Multilingual
 
 Extension to the [Slim](http://www.slimframework.com/) framework v3 to enable language based routing, i.e. i18n and l10n.
 
