@@ -1,9 +1,9 @@
 {
-    "name": "luism-s/multilingualslim",
+    "name": "Slim 3 Multilingual",
     "type": "library", 
     "description": "Multilanguage support for Slim framework 3",
     "keywords": ["slim","multilanguage", "multilingual", "i18n", "l10n"],
-    "homepage": "https://github.com/luism-s/MultilingualSlim",
+    "homepage": "https://github.com/luism-s/slim-3-multilingual",
     "license": "MIT",
     "require": {
         "slim/slim": "~3.5"
