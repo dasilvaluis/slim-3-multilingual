@@ -43,12 +43,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/luism-s/slim-3-multilingual.git",
-                "reference": "6c758fe12ad22450db5b306a07e0123851e347fc"
+                "reference": "9155678eb97292cd3202bf56f45478fe4ded0a72"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/luism-s/slim-3-multilingual/zipball/6c758fe12ad22450db5b306a07e0123851e347fc",
-                "reference": "6c758fe12ad22450db5b306a07e0123851e347fc",
+                "url": "https://api.github.com/repos/luism-s/slim-3-multilingual/zipball/9155678eb97292cd3202bf56f45478fe4ded0a72",
+                "reference": "9155678eb97292cd3202bf56f45478fe4ded0a72",
                 "shasum": ""
             },
             "require": {
@@ -73,7 +73,7 @@
                 "multilingual",
                 "slim"
             ],
-            "time": "2018-09-03T19:57:39+00:00"
+            "time": "2018-09-15T17:03:35+00:00"
         },
         {
             "name": "nikic/fast-route",
