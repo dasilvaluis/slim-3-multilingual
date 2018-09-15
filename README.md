@@ -14,16 +14,6 @@ By terminal:
 composer require luism-s/multilingualslim
 ```
 
-By editing composer.json
-
-```json
-{
-    "require": {
-        "luism-s/multilingualslim": "~1.1.2"
-    }
-}    
-```
-
 ## Usage
 
 The `$container` is used as an interface between the Middleware and the Routes. 
