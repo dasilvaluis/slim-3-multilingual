@@ -1,6 +1,6 @@
 # Slim 3 Multilingual
 
-Extension to the [Slim PHP micro-framework](http://www.slimframework.com/) framework v3 to enable language based routing, i.e. i18n and l10n.
+Extension to the [Slim PHP micro-framework](http://www.slimframework.com/) version 3 to enable language based routing, i.e. i18n and l10n.
 
 ## Dependencies
 
