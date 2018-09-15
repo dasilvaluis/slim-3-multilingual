@@ -7,8 +7,10 @@ class LanguageMiddleware {
     protected $container;
 
     public function __construct($available_languages, $default_language, $container) {
-        if(!is_array($available_languages)) 
+
+        if(!is_array($available_languages)) {
             $available_languages = array($available_languages);
+        }
 
         $this->container = $container;
         $this->container['default_language'] = $default_language;
@@ -16,16 +18,17 @@ class LanguageMiddleware {
         $this->container['language'] = $default_language;
    }
 
-   /**
+    /**
      * RestrictRoute middleware invokable class.
-     *
-     * @param \Psr\Http\Message\ServerRequestInterface $request  PSR7 request
-     * @param \Psr\Http\Message\ResponseInterface      $response PSR7 response
-     * @param callable                                 $next     Next middleware
-     *
+     * 
+     * @param \Psr\Http\Message\ServerRequestInterface PSR7 request
+     * @param \Psr\Http\Message\ResponseInterface PSR7 response
+     * @param callable 
+     * 
      * @return \Psr\Http\Message\ResponseInterface
      */
     public function __invoke($request, $response, $next) {
+
         $uri = $request->getUri();
         $path = $uri->getPath();
         
@@ -33,7 +36,7 @@ class LanguageMiddleware {
         $pathChunks = explode("/", $path); 
 
         //Check for language references
-        if(count($pathChunks) > 1 && in_array($pathChunks[1], $this->container['available_languages'])) {
+        if ( count($pathChunks) > 1 && in_array($pathChunks[1], $this->container['available_languages']) ) {
             
             //Set current language
             $this->container['language'] = $pathChunks[1];  
@@ -45,7 +48,6 @@ class LanguageMiddleware {
 
             return $next($request->withUri($newUri), $response); 
         }
-
         return $next($request, $response);
     }
 }

@@ -12,7 +12,7 @@ By terminal:
 
 ```shell
 
-    composer require luism-s/multilingualslim "dev-master"
+    composer require luism-s/multilingualslim
 
 ```
 
@@ -22,7 +22,7 @@ By editing composer.json
 
     {
         "require": {
-            "luism-s/multilingualslim": "dev-master"
+            "luism-s/multilingualslim": "~1.1.2"
         }
     }
     
