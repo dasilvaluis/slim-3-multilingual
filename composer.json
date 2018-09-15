@@ -1,7 +1,7 @@
 {
     "name": "luism-s/slim-3-multilingual",
     "type": "library", 
-    "description": "Multilanguage support for Slim framework 3",
+    "description": "Multilanguage support for Slim micro-framework 3",
     "version": "1.1.3",
     "keywords": ["slim","multilanguage", "multilingual", "i18n", "l10n"],
     "homepage": "https://github.com/luism-s/slim-3-multilingual",
